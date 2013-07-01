@@ -14,7 +14,7 @@ int main ()
 	
 	int menuChoice = 0, level1Choice = 0, level2Choice = 0, level3Choice = 0, level4Choice = 0;
 	int level5Choice = 0, score = 0, currentHighScore = 0, newHighScore = 0, randomLvl1 = 0;
-	int randomLvl2 = 0, randomLvl3 = 0, randomLvl4 = 0, randomLvl5 = 0;
+	int randomLvl2 = 0, randomLvl3 = 0, randomLvl4 = 0, randomLvl5 = 0, total = 0;
 	char userName [50];
 
 	//Intro
@@ -104,8 +104,11 @@ int main ()
 		cout << "point!\n\n";
 	else
 		cout << "points!\n\n";
-
+	
 	score = randomLvl1;	
+	total += score;
+
+	//score = randomLvl1;	
 
 	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
 	
@@ -158,7 +161,8 @@ int main ()
 	else
 		cout << "points!\n\n";
 
-	score = score + randomLvl2;
+	score = randomLvl2;
+	total += score;
 
 	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
 
@@ -207,7 +211,8 @@ int main ()
 	else
 		cout << "points!\n\n";
 	
-	score = score + randomLvl3;		
+	score = randomLvl3;
+	total += score;		
 
 	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
 
@@ -256,7 +261,8 @@ int main ()
 	else
 		cout << "points!\n\n";
 
-	score = score + randomLvl4;	
+	score = randomLvl4;
+	total += score;	
 
 	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
 
@@ -305,13 +311,14 @@ int main ()
 	else
 		cout << "points!\n\n";
 
-	score = score + randomLvl5;	
+	score = randomLvl5;
+	total += score;	
 
 	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
 
 	
 	//Calculate score
-	cout << "You earned a total of " << score << " points.\n\n";
+	cout << "You earned a total of " << total << " points.\n\n";
 	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
 	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
 
