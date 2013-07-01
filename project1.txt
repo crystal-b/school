@@ -13,8 +13,7 @@ int main ()
 	// Declare and initialize variables: 
 	
 	int menuChoice = 0, level1Choice = 0, level2Choice = 0, level3Choice = 0, level4Choice = 0;
-	int level5Choice = 0, score = 0, currentHighScore = 0, newHighScore = 0, randomLvl1 = 0;
-	int randomLvl2 = 0, randomLvl3 = 0, randomLvl4 = 0, randomLvl5 = 0, total = 0;
+	int level5Choice = 0, score = 0, currentHighScore = 0, newHighScore = 0, total = 0;
 	char userName [50];
 
 	//Intro
@@ -27,7 +26,7 @@ int main ()
 	//Prompt user for name
 	cout << "Please enter your name: ";
 	cin.getline (userName, 50);
-	cout << "\n................................................................................\n\n";
+	cout << "\n...............................................................................\n\n";
 	
 	//Display main menu and prompt for menu choice
 	
@@ -59,7 +58,7 @@ int main ()
 
 	case 2: //Play Game
 		cout << "Great! Let's get started.\n\n";
-		cout << "................................................................................\n\n";
+		cout << "...............................................................................\n\n";
 
 	//*Display level 1 menu and prompt for menu choice and validate
 	do
@@ -73,42 +72,30 @@ int main ()
 
 		//Generate random number
 		srand (time(NULL));
-		randomLvl1 = rand () %10 + 1;
+		score = rand () %10 + 1;
 
 		if (level1Choice == 1) 
-		{
 			cout << "\nWhat's that? Oh, I didn't hear you. Kanye's new album just leaked.\n";
-			//cout << "You earned " << randomLvl1 << " points!\n\n";
-		}
 		else if (level1Choice == 2)
-		{
 			cout << "\nAs you wish.\n";
-			//cout << "You earned " << randomLvl1 << " points!\n\n";
-		}
 		else if (level1Choice == 3)
-		{
 			cout << "\nMy mistake. You are so intelligent! (Please do not imprison me)\n";
-			//cout << "You earned " << randomLvl1 << " points!\n\n";
-		}
 		else
 		{
-			cout << ".............................................................................\n\n";
+			cout << "............................................................................\n\n";
 			cout << "Invalid entry. You must choose 1 - 3.\n\n";
-			cout << ".............................................................................\n\n";
+			cout << "............................................................................\n\n";
 		}
 	}
 	while (level1Choice < 1 || level1Choice > 3);	
 
-	cout << "You earned " << randomLvl1 << " ";
-	if (randomLvl1 == 1)
+	cout << "You earned " << score << " ";
+	if (score == 1)
 		cout << "point!\n\n";
 	else
 		cout << "points!\n\n";
-	
-	score = randomLvl1;	
-	total += score;
-
-	//score = randomLvl1;	
+		
+	total += score;	
 
 	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
 	
@@ -126,42 +113,38 @@ int main ()
 
 		//Generate random number
 		srand (time(NULL));
-		randomLvl2 = rand () %10 + 1;
+		score = rand () %10 + 1;
 
 		if (level2Choice == 1) 
 		{
 			cout << "\nOk, though you'll have to try and quietly shut down a few elementary\n";
 			cout << "schools. But hey, those kids can't vote anyway!\n";
-			//cout << "You earned " << randomLvl2 << " points!\n\n";
 		}
 		else if (level2Choice == 2)
 		{
 			cout << "\nIf they want tigers, they'll have to pay for tigers. Or you'll nuke\n";
 			cout << "their country. That's a bargain, right?\n";
-			//cout << "You earned " << randomLvl2 << " points!\n\n";
 		}
 		else if (level2Choice == 3)
 		{
 			cout << "\nEveryone loves kitties. And you'll take care of that pesky\n";
 			cout << "street cat problem downtown. Win!\n";
-			//cout << "You earned " << randomLvl2 << " points!\n\n";
 		}
 		else
 		{
-			cout << ".............................................................................\n\n";
+			cout << "............................................................................\n\n";
 			cout << "Invalid entry. You must choose 1 - 3.\n\n";
-			cout << ".............................................................................\n\n";
+			cout << "............................................................................\n\n";
 		}
 	}
 	while (level2Choice < 1 || level2Choice > 3);	
 
-	cout << "You earned " << randomLvl2 << " ";
-	if (randomLvl2 == 1)
+	cout << "You earned " << score << " ";
+	if (score == 1)
 		cout << "point!\n\n";
 	else
 		cout << "points!\n\n";
 
-	score = randomLvl2;
 	total += score;
 
 	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
@@ -179,39 +162,29 @@ int main ()
 
 		//Generate random number
 		srand (time(NULL));
-		randomLvl3 = rand () %10 + 1;
+		score = rand () %10 + 1;
 
 		if (level3Choice == 1) 
-		{
 			cout << "\nWhat's that? Oh, I didn't hear you. Kanye's new album just leaked.\n";
-			//cout << "You earned " << randomLvl3 << " points!\n\n";
-		}
 		else if (level3Choice == 2)
-		{
 			cout << "\nAs you wish.\n";
-			//cout << "You earned " << randomLvl3 << " points!\n\n";
-		}
 		else if (level3Choice == 3)
-		{
 			cout << "\nMy mistake. You are so intelligent! (Please do not imprison me)\n";
-			//cout << "You earned " << randomLvl3 << " points!\n\n";
-		}
 		else
 		{
-			cout << ".............................................................................\n\n";
+			cout << "............................................................................\n\n";
 			cout << "Invalid entry. You must choose 1 - 3.\n\n";
-			cout << ".............................................................................\n\n";
+			cout << "............................................................................\n\n";
 		}
 	}
 	while (level3Choice < 1 || level3Choice > 3);
 
-	cout << "You earned " << randomLvl3 << " ";
-	if (randomLvl3 == 1)
+	cout << "You earned " << score << " ";
+	if (score == 1)
 		cout << "point!\n\n";
 	else
 		cout << "points!\n\n";
 	
-	score = randomLvl3;
 	total += score;		
 
 	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
@@ -229,39 +202,29 @@ int main ()
 
 		//Generate random number
 		srand (time(NULL));
-		randomLvl4 = rand () %10 + 1;
+		score = rand () %10 + 1;
 
 		if (level4Choice == 1) 
-		{
 			cout << "\nWhat's that? Oh, I didn't hear you. Kanye's new album just leaked.\n";
-			//cout << "You earned " << randomLvl4 << " points!\n\n";
-		}
 		else if (level4Choice == 2)
-		{
 			cout << "\nAs you wish.\n";
-			//cout << "You earned " << randomLvl4 << " points!\n\n";
-		}
 		else if (level4Choice == 3)
-		{
 			cout << "\nMy mistake. You are so intelligent! (Please do not imprison me)\n";
-			//cout << "You earned " << randomLvl4 << " points!\n\n";
-		}
 		else
 		{
-			cout << ".............................................................................\n\n";
+			cout << "............................................................................\n\n";
 			cout << "Invalid entry. You must choose 1 - 3.\n\n";
-			cout << ".............................................................................\n\n";
+			cout << "............................................................................\n\n";
 		}
 	}
 	while (level4Choice < 1 || level4Choice > 3);	
 	
-	cout << "You earned " << randomLvl4 << " ";
-	if (randomLvl4 == 1)
+	cout << "You earned " << score << " ";
+	if (score == 1)
 		cout << "point!\n\n";
 	else
 		cout << "points!\n\n";
 
-	score = randomLvl4;
 	total += score;	
 
 	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
@@ -279,39 +242,29 @@ int main ()
 
 		//Generate random number
 		srand (time(NULL));
-		randomLvl5 = rand () %10 + 1;
+		score = rand () %10 + 1;
 
 		if (level5Choice == 1) 
-		{
 			cout << "\nWhat's that? Oh, I didn't hear you. Kanye's new album just leaked.\n";
-			//cout << "You earned " << randomLvl5 << " points!\n\n";
-		}
 		else if (level5Choice == 2)
-		{
 			cout << "\nAs you wish.\n";
-			//cout << "You earned " << randomLvl5 << " points!\n\n";
-		}
 		else if (level5Choice == 3)
-		{
 			cout << "\nMy mistake. You are so intelligent! (Please do not imprison me)\n";
-			//cout << "You earned " << randomLvl5 << " points!\n\n";
-		}
 		else
 		{
-			cout << ".............................................................................\n\n";
+			cout << "............................................................................\n\n";
 			cout << "Invalid entry. You must choose 1 - 3.\n\n";
-			cout << ".............................................................................\n\n";
+			cout << "............................................................................\n\n";
 		}
 	}
 	while (level5Choice < 1 || level5Choice > 3);	
 
-	cout << "You earned " << randomLvl5 << " ";
-	if (randomLvl5 == 1)
+	cout << "You earned " << score << " ";
+	if (score == 1)
 		cout << "point!\n\n";
 	else
 		cout << "points!\n\n";
 
-	score = randomLvl5;
 	total += score;	
 
 	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
