@@ -1,0 +1,88 @@
+L1q1: A foreign minister wants no less than 100 tigers to accompany the entourage to the doors of your capitol building. Your country is facing a budget crisis and, well, tigers are crazy expensive. Do you:
+L1a1: Charge it!
+Ok, though you'll have to try and quietly shut down a few elementary schools to balance the budget. But hey, those kids can't vote anyway!
+L2q1: Who would have known that teachers and parents would stage mass protests over a couple of schools? You handle the situation by:
+L2a1: Holding a bake sale to raise funds
+	Are you running a country or a PTA meeting?
+L3q1: Who could have imagined that parents of children with gluten allergies would be up in arms over all of the flour-filled confections? You address their concerns by:
+L3a1: Creating a new line of gluten-free snacks
+	Complete with the grand leader’s genuine seal of approval.
+L3a2: Repent and call for a war on bake sales.
+	You’ll do anything to please anyone.
+L3a3: Let them eat carrots.
+	Carrots are snacks too.
+L2a2: Privatizing the entire school system.
+L3q2: Scores have nearly doubled in quality! But for some reason the students are all turning a slight shade of purple. The disease management agency is concerned enough to call for a quarantine.
+L3a4: Quit now.
+	You just can’t catch a break.
+L3a5: Institute new mandatory vaccines.
+	Doesn’t really matter if they’re just placebos.
+L3a6: Throw a national pizza party.
+	You can always ignore the epidemic.
+L2a3: fold
+L3q3: wildly popular, terribly broke
+L3a7: ride the wave, disregard debt
+L3a8: get tough, raise taxes
+L3a9: invade country for natural resources
+L1a2: Bargain.
+If they want tigers, they'll have to pay for tigers. Or you'll nuke their country. That's a bargain, right?
+L2q2: Greetings << username << and welcome to the brink of war. Now that half the world is against you, your plan for peace is to:
+L2a4: Say screw ‘em.
+	Nothing rattles you, huh?
+L3q4:  Now the entire world is trying to call your bluff. With no foreign allies left you:
+L3a10: Shrug it off 
+Seriously, nothing fazes you. You just pet your red button in your spare time
+L3a11: Press the button! 
+But not before giving a grandiose speech to your people about their superiority. If the world’s going out, you’ll be sure to go out on top
+L3a12: Call on your team of assassins
+	When your challengers start to drop, everyone will get the picture and back off.
+L2a5: Apologize profusely
+	You better look sorrowful, even if you’re not.
+L3q5: You worked your magic and everyone has forgiven you! To celebrate, it’s:
+L3a13: Tax breaks for everyone!
+L3a14: A puppy in every home!
+L3a15: A new mission to the moon!
+L2a6: Is the other half of the world really that important?
+We may need to give you a crash course on international relations aka. How not to end the world in a nuclear holocaust
+L3q6: You are deep into your political theory studies when the latest jobs report gets released. Somehow unemployment has jumped to 25%. To avoid a national freak-out, you:
+L3a16: Kick all foreign workers out of the country
+		Because that will make all the difference
+L3a17: Hire a few tutors
+		About 5 million. That sounds like a few.		
+L3a18: Blame the lazy populace
+		Do you even know what they say about salt and wounds?
+L1a3: You know what's better than 100 tigers? 1000 kittens.
+	Everyone loves kitties. And you'll take care of that pesky street cat problem downtown. Win!
+L2q3: You wake up the next morning to headlines across the world ridiculing you for the “Grand Catastrophe”. But will your people appreciate your frugality or gather their rotten tomatoes? You quickly issue a press release announcing:
+L2a7: A ban on international communications.
+ Phones? Dead. Internet? Down. Planes? Grounded. This place is on lockdown.
+L3q7: Protests ensue. The Society for an Open Internet is the most vocal, calling for more Global Internet Freedoms or GIFs. Your response is:
+L3a19: Open Internet? You all must have meant internment.
+	My mistake. You are so intelligent! (Please do not imprison me).
+L3a20: To relent. SOI agents already hacked into your computer and wiped all of the photos of your favorite lawn gnome. Too depressed to continue, you let the Internet go.
+	What's that? Oh, I didn't hear you. Kanye's new album just leaked.
+L3a21: To release the viruses! Surely your top-secret security agency can overpower all of the country’s hackers. 
+	As you wish.
+L2a8: A new national holiday for feline spaying/neutering awareness. 
+So that was your plan all along…
+L3q8: Someone must really hate you, because hundreds of stray cats keep mysteriously appearing in your yard every hour or so. You:
+L3a22: Order all the dogs you can find on Craigslist. Nature will sort this one out.
+	I hope you enjoy never sleeping again. 
+L3a23: Succumb and let them in. 
+You were planning on moving anyway. But wait, there are so many! They just keep pouring in. Drowning in fur. Can’t escape. Glgrhglahhhh.
+If (level1Choice == 3 && level2Choice = 2 && level1Choice == 2)
+Score == 0
+Cout >> Well that wasn’t a pleasant way to go. You earned 0 points and lost your head. 
+Else
+	Cout normal random score
+L3a24: Resign.
+	Absolute power is overrated. Time to retire and open a bee farm upstate.
+L2a9: Your vacation. 
+Let it all blow over while drowning your shame with umbrella drinks on the beach.
+L3q9: Excellent timing. The whole beach is shut down because of an offshore oil spill. You’re right there with the first responders and:
+L3a25: You phone housekeeping. And then the homeland disaster agency.
+You should probably rename one of those contacts if you keep mixing them up. We don’t want to repeat that flood incident and there’s only so much a mop can do.
+L3a26: You dive straight into the water.
+The oil still has a few miles to go, but you have great form in all those press photos. Definite campaign poster material.
+L3a27: You leave town for a non-greasy beach. Surely no one will recognize you in this floral outfit anyway.
+	Don’t take this the wrong way, but I’m not sure you really want to be leader. Just saying.
