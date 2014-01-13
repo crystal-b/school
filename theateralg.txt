@@ -1,0 +1,26 @@
+Movie Theater Algorithm
+
+This program will calculate the gross box office profit for a single night at a movie theater, the net box office profit, and the remaining profit that is paid to the distributor. 
+*Use constants
+
+Declare constants
+The constant is the theater's percentage of ticket sales revenue/gross profit (25%), the adult ticket price ($9) and the child ticket price ($6)
+
+Declare and initialize variables
+Will include theater's gross profit, net profit, movie name, adult tickets, child tickets
+
+Intro
+
+Prompt for information
+Will include name of movie, amount of adult and child tickets sold
+
+Calculate gross profit
+The gross profit will be the number of adult tickets sold multiplied by the price of an adult ticket ($9) plus the number of child tickets sold multiplied by the price of a child ticket ($6)
+
+Calculate net profit
+The net profit will be the gross profit multiplied by 25% to calculate the theater's cut
+
+Calculate amount paid to distributor
+This amount is the gross profit less the net profit
+
+Display movie name, adult/child tickets sold, gross profit, net profit, and distributor's amount
