@@ -1,0 +1,23 @@
+Property Tax Algorithm - Homework 2
+
+A program that asks for the actual value of a property to calculate the assessment value (60% of the actual value) and the property tax (64% of the assessment value)
+
+*Use constants when possible
+
+Declare and initialize variables
+float actual value = 0.0
+const float assessment value = 0.0, property tax = 0.0
+
+Intro
+
+Prompt for base
+
+Calculate assessment value
+assessment value = .6 * actual value
+
+Display assessment value
+
+Calculate property tax
+property tax = .64 * assessment value
+
+Display property tax
