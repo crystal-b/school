@@ -1,0 +1,38 @@
+//restaurant.cpp to calculate a bill with tax and tip
+
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    //Declare and initialize variables
+    float mealCost = 0.0, tax = 0.0, tip = 0.0, billTotal = 0.0;
+    //Intro
+    cout<<"Welcome to Broward Cafe!"<<endl;
+    cout<<"\n";
+    
+    //Prompt user for meal cost
+    cout<<fixed<<showpoint<<setprecision(2);
+    cout<<"Please enter the cost of your meal:\t$";
+    cin>>mealCost;
+    cout<<"\n";
+    
+    //Display meal cost
+    cout<<"Meal Cost:\t$"<<mealCost<<endl;
+    //Calculate and display tax
+    tax = 0.07*mealCost;
+    cout<<"Tax:\t$"<<tax<<endl;
+    //Calculate and display tip
+    tip = (mealCost + tax) * 0.20;
+    cout<<"Tip:\t$"<<tip<<endl;
+    //Calculate and display bill total
+    billTotal = mealCost + tax + tip;
+    cout<<"Total Bill:\t$"<<billTotal<<endl;
+    
+    
+    
+       
+    return 0;
+}
