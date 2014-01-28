@@ -1,0 +1,363 @@
+//PROJECT 2 - Revise Project 1 to include an extra level plus functions, structs, and 
+//arrays
+#include <iostream> 
+#include <iomanip> 
+#include <ctime> 
+#include <fstream> 
+#include <string> 
+using namespace std; 
+ 
+//declare a structure called Player 
+struct Player 
+{ 
+    //data properties 
+    string userName; 
+    int score, total; 
+     
+    //constructor: function to initialize numeric data 
+    Player() 
+    { 
+        score = 0; 
+        total=0; 
+    } 
+}; 
+ 
+//function prototypes 
+//return type: Score 
+//parameters: none 
+//Purpose: this function generates a random number to use as the score a user earns in a level 
+int RandomNum(); 
+ 
+//return type: Player 
+//parameters: none 
+//Purpose: this function gets the properties of the player and returns the whole player object 
+Player GetPlayer(); 
+ 
+//return type: void 
+//parameters: none 
+//Purpose: this function displays a celebratory image if the current player has one of the top scores 
+void DisplayCelebration(); 
+ 
+//return type: void 
+//parameters: 1 array of Players, 1 int size of array  
+//Purpose: this function writes the top players to a file 
+void WriteTopPlayers(Player[], int); 
+ 
+//return type: void 
+//parameters: 1 int playerOne.score, passed by reference 
+//purpose: this function determines whether the following word should be singular or plural after the score 
+is announced 
+void Plurality(int &); 
+ 
+//constant to represent the size of the array 
+const int SIZE = 3; 
+ 
+int main () 
+{ 
+    //Declare array of Players size 3 called myPlayers 
+    Player myPlayers[SIZE]; 
+     
+    //curent player struct 
+    Player PlayerOne; 
+     
+    //get the information for all of the Players in myPlayers 
+    for(int i = 0; i < SIZE; i++) 
+    { 
+        //call GetPlayers 
+        myPlayers[i] = GetPlayer(); 
+    } 
+     
+    // Declare and initialize variables: 
+    int menuChoice = 0, level1Choice = 0, level2Choice = 0, level3Choice = 0, total = 0; 
+    //Declare file pointer for input 
+    ifstream infile; 
+    //Declare file pointer for output 
+    ofstream outfile; 
+ 
+    //Intro 
+    cout << 
+"\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++\n"; 
+    cout << 
+"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\
+n\n"; 
+    cout << "                       Welcome to Head of State!\n\n"; 
+    
+    //Prompt user for name 
+    cout << "                       Please enter your name: "; 
+    cin>>PlayerOne.userName; 
+    cout << "\n...............................................................................\n\n"; 
+    
+    //Display main menu and prompt for menu choice 
+     do 
+    { 
+    PlayerOne.total=0; 
+    cout << "Dear " << PlayerOne.userName << ", as ruler, you have the power to:\n\n";    
+    cout << "1. See Rules\n"; 
+    cout << "2. Play Game\n"; 
+    cout << "3. Quit\n\n"; 
+    cout << "What will you choose? Select 1-3: "; 
+    cin >> menuChoice; 
+    cout << 
+"\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++\n\n"; 
+    
+    //Create switch structure 
+     switch (menuChoice) 
+    { 
+    case 1: //See Rules 
+        cout << "Congratulations on becoming Head of State!\n\n"; 
+        cout << "In this game, you rule the country. Your decisions determine your popularity\n"; 
+        cout << "and what kind of ruler you will be. Is it:\n"; 
+        cout << "*a ruthless dictator?\n"; 
+        cout << "*an aloof monarch?\n"; 
+        cout << "*a power-hungry president?\n"; 
+        cout << "Make wise choices, because the well-being of the people, and of your head,\n"; 
+        cout << "depend on it.\n\n";    
+        cout << 
+"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\
+n\n"; 
+    break; 
+ 
+    case 2: //Play Game 
+        cout << "Great! Let's get started.\n\n"; 
+        cout << "...............................................................................\n\n"; 
+ 
+    //*Display level 1 menu and prompt for menu choice and validate 
+    do 
+    { 
+        cout << "A foreign minister wants no less than 100 tigers to accompany the entourage\n"; 
+        cout << "to the doors of your capitol building. Your country is facing a budget crisis\n"; 
+        cout << "and, well, tigers are crazy expensive. Do you:\n\n";    
+        cout << "1) Charge it!\n"; 
+        cout << "2) Bargain.\n"; 
+        cout << "3) You know what's better than 100 tigers? 1000 kittens.\n\n"; 
+        cin >> level1Choice; 
+        if (level1Choice == 1) 
+        { 
+        cout << "\nOk, though you'll have to try and quietly shut down a few elementary\n"; 
+            cout << "schools. But hey, those kids can't vote anyway!\n"; 
+        } 
+        else if (level1Choice == 2) 
+        { 
+            cout << "\nIf they want tigers, they'll have to pay for tigers. Or you'll nuke\n"; 
+            cout << "their country. That's a bargain, right?\n"; 
+        } 
+        else if (level1Choice == 3) 
+        { 
+            cout << "\nEveryone loves kitties. And you'll take care of that pesky\n"; 
+            cout << "street cat problem downtown. Win!\n"; 
+        } 
+        else 
+        { 
+            cout << "............................................................................\n\n"; 
+            cout << "Invalid entry. You must choose 1 - 3.\n\n"; 
+            cout << "............................................................................\n\n"; 
+        } 
+ 
+        //call RandomNum function 
+        PlayerOne.score=RandomNum(); 
+         
+            
+    } 
+    while (level1Choice < 1 || level1Choice > 3);  
+ 
+    //call Plurality function 
+    Plurality(PlayerOne.score); 
+        
+    PlayerOne.total += PlayerOne.score;    
+ 
+    cout << 
+"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\
+n\n";
+
+Ö
+
+//Display points for lvl 3 
+            //call RandomNum function 
+            PlayerOne.score=RandomNum(); 
+ 
+            if (level3Choice == 2 && level2Choice == 2 && level1Choice == 3) 
+            { 
+                cout<<"\nWell that wasnít a pleasant way to go. You won "<<PlayerOne.score<<" points but 
+lost your head.\n\n"; 
+            } 
+            else 
+            { 
+                //call Plurality function 
+                Plurality(PlayerOne.score); 
+            }      
+               
+            PlayerOne.total += PlayerOne.score;    
+            cout << 
+"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\
+n\n"; 
+       
+    //Calculate and display score 
+    cout << "You earned a total of " << PlayerOne.total << " points.\n\n"; 
+    cout << 
+"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\
+n"; 
+    cout << 
+"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\
+n\n"; 
+     
+     
+    //Display read in information to test code 
+    /* 
+    for(int i = 0; i < SIZE; i++) 
+    { 
+            cout<<myPlayers[i].userName<<" "<<myPlayers[i].total<<endl; 
+    }; 
+      */ 
+ 
+    //Determine if user's score beats current high score and, if so, write new name and total to file 
+    outfile.open("highscore.txt", ios::out); 
+    if(PlayerOne.total > myPlayers[0].total) 
+    { 
+        myPlayers[2]=myPlayers[1]; 
+        myPlayers[1]=myPlayers[0]; 
+        myPlayers[0]=PlayerOne; 
+        //call function 
+        DisplayCelebration();    
+        //call function 
+        WriteTopPlayers(myPlayers, SIZE); 
+    } 
+    else if(PlayerOne.total > myPlayers[1].total) 
+    { 
+        myPlayers[2]=myPlayers[1]; 
+        myPlayers[1]=PlayerOne; 
+        //call function 
+        DisplayCelebration(); 
+        //call function 
+        WriteTopPlayers(myPlayers, SIZE); 
+    } 
+    else if(PlayerOne.total > myPlayers[2].total) 
+    { 
+        
+        myPlayers[2]=PlayerOne; 
+        //call function 
+        DisplayCelebration(); 
+        //call function 
+        WriteTopPlayers(myPlayers, SIZE); 
+    } 
+    else 
+    { 
+        
+        cout << "\nTry again to see if you can gain popularity and earn a top score.\n"; 
+    } 
+    
+    break; 
+ 
+            
+    case 3: //Quit 
+         
+        cout << "Thanks for playing. Goodbye!\n\n"; 
+ 
+    break; 
+ 
+        
+    default: 
+     
+        cout << "Invalid entry. You must choose 1-3 from the menu.\n\n"; 
+    
+    }    
+} 
+    while (menuChoice != 3); 
+ 
+ 
+    return 0; 
+ 
+} 
+ 
+ 
+//function definitions 
+int RandomNum() 
+{ 
+    //declare a local variable of type RandomNum 
+    int score; 
+     
+    //Generate random number 
+    srand (time(NULL)); 
+    score = rand () %20 + 1;    
+     
+    return score; 
+} 
+ 
+ 
+ 
+void GetPlayer() 
+{ 
+    //declare file pointer 
+    ifstream infile; 
+     
+    //declare a variable of type Player 
+    Player tempPlayer; 
+     
+    //open file 
+    infile.open("highscore.txt", ios::in); 
+     
+    //read in data
+for(int i=0; I < SIZE; i++)
+{ 
+ 	infile>>tempPlayer[i].userName>>tempPlayer[i].total;
+} 
+     
+    //close file 
+    infile.close(); 
+     
+    //return tempPlayer; 
+} 
+ 
+void DisplayCelebration() 
+{ 
+        cout << "                                 *      *                         \n"; 
+        cout << "                                  \\   /                          \n"; 
+        cout << "                                   *''*                           \n"; 
+        cout << "     +                     :     _`*\\/ *`_                        \n"; 
+        cout << "     |                   .\\'/ .*  * /\\*  *                      \n";            
+        cout << "     =                 -=  o  =- ` *..* ` _____                  \n"; 
+        cout << "    ===       ________ .' /.\\` . /    \\  /     \\                \n"; 
+        cout << "     |        |[]  []|     :    *       ( water )                \n"; 
+        cout << "     |        |[]  []|                   \\_____/                 \n"; 
+        cout << "     |   ____ |[]  []|                     |_|               **  \n"; 
+        cout << "     |   |  | |[]  []|    /\\       /\\      |_|              **** \n"; 
+        cout << "    ===  |  | |[]  []|   /__\\     /  \\     |_| #######     ******\n"; 
+        cout << "    / \\  |__| |[]__[]|   |**|    /    \\    |_| |  |  |      *||* \n"; 
+        cout << "   /   \\ |[]| | [||] |   |[]|   /  /\\  \\   |_| |  |  |#######||#############\n"; 
+        cout << 
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+n"; 
+        cout << "\n                          You hold a top score!!!\n\n"; 
+        cout << 
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+n"; 
+        cout << 
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+n\n"; 
+} 
+ 
+void WriteTopPlayers(Player myPlayers[], int SIZE) 
+{ 
+    //declare file pointer 
+    ofstream outfile; 
+    //open file 
+    outfile.open("highscore.txt", ios::out); 
+    //for loop to write top players to file 
+    for(int i = 0; i < SIZE; i++) 
+    { 
+        outfile<<myPlayers[i].userName<<" "<<myPlayers[i].total<<endl; 
+         
+    } 
+    //Close file 
+    outfile.close(); 
+} 
+ 
+void Plurality(int &a) 
+{ 
+cout << "You earned " << a << " "; 
+    if (a == 1) 
+        cout << "point!\n\n"; 
+    else 
+        cout << "points!\n\n"; 
+}
