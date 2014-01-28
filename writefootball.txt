@@ -1,0 +1,26 @@
+/* writefootball.cpp
+A program that writes information to a file called "football.txt"
+June 5, 2013
+*/
+
+#include <iostream>
+//Include the file stream library
+#include <fstream>
+using namespace std;
+
+int main()
+{   
+    //Declare a file pointer
+    ofstream outfile;
+    //Open file
+    outfile.open ("football.txt", ios::out);
+    /*Prompt for information about:
+    Peyton Manning, 14000000, 33, Indianapolis Colts, Quarterback
+    */
+    outfile << "Peyton Manning\n14000000\n33\nIndianapolis     
+Colts\nQuarterback\n";
+    //Close file
+    outfile.close();
+    
+    return 0;
+}
