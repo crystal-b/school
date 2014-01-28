@@ -1,0 +1,11 @@
+Batch Processing Algorithm
+This is a program that writes some information to a file called “football.txt”
+Crystal Brusch / ml149
+June 5, 2013
+
+Include the file stream library
+Declare a file pointer
+Open file
+Write the following information to the file:
+Peyton Manning, 14000000, 33, Indianapolis Colts, Quarterback
+Close file
