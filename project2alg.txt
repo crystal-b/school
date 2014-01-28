@@ -1,0 +1,476 @@
+Project2Alg
+Crystal Brusch / ml149
+August 7, 2013
+
+This is a program that creates an RPG called "Head of State" where you are the ruler of a country. Your actions 
+determine what kind of ruler you will be. Is it a ruthless dictator, an aloof monarch, a benevolent president? Make 
+your choices wisely, because the well-being of your people, and of your head, depend on it.
+ 
+Declare a structure called Player
+	data properties: userName, int score and int total
+	constructor function to initialize numeric data
+
+Function prototypes
+	int RandomNum function
+	return type: score
+	parameters: none
+	purpose: generate a random number
+
+	Player GetPlayer function
+	return type: Player
+	parameters: none
+	purpose: get properties of player and return player object
+
+	void DisplayCelebration function
+	return type: void
+	parameters: none
+	purpose: display a celebratory image to top players
+
+	void WriteTopPlayers function
+	return type: void
+	parameters: 1 array of Players, 1 int size of array
+	purpose: write 3 top players to file
+
+	void Plurality function
+	return type: void
+	parameter: 1 int playerOne.score, passed by reference
+	purpose: this function determines whether the following word should be singular or plural after the score is 	announced
+
+Constant to represent size of array for 3 players
+
+Declare an array of Players size 3 called myPlayers
+
+Declare a structure called PlayerOne
+
+Assemble all Players info into myPlayers
+	for(int i=0; i<SIZE; i++)
+	{
+		Call GetPlayers
+		myPlayers[i]=GetPlayer()
+	)
+
+Declare and initialize variables:
+	int menuChoice, level1Choice, level2Choice, level3Choice, currentHighScore, total, newHighScore
+    	string name;
+Declare file pointer for input:
+       ifstream infile
+Declare file pointer for output
+   	 ofstream outfile
+Intro
+Prompt user for name
+Display main menu and prompt for menu choice
+	do
+    	{
+    		1. See Rules
+    		2. Play Game
+    		3. Quit
+    		Get menuChoice
+Create switch structure
+switch (menuChoice)
+    	case 1: See Rules
+break
+       case 2: Play Game
+Display level 1 menu and prompt for menu choice and validate
+   	 do
+  	 {
+        	1.
+		2.
+		3.
+        	Prompt for level1Choice
+      		if (level1Choice == 1)
+			Display comment
+        		else if (level1Choice == 2)
+			Display comment
+      		else if (level1Choice == 3)
+       			Display comment
+                Else
+       			Display invalid
+	Call RandomNum function
+		playerOne.score=RandomNum   
+   	}
+	while (level1Choice < 1 || level1Choice > 3)
+Display level 1 score
+Call Plurality function
+	Plurality(playerOne.score)  
+Keep running total of score     
+   	 total += score
+
+   
+	Display menu choices for level 2
+	Display lvl 2 menu re: lvl 1 question 1 answer 1
+        	if (level1Choice == 1)
+       		do
+  	  	{
+        		1.
+			2.
+			3.
+        		Prompt for level2Choice
+		Validate
+      			if (level2Choice == 1)
+				Display comment
+        		else if (level2Choice == 2)
+				Display comment
+      			else if (level2Choice == 3)
+       				Display comment
+                    	Else
+       				Display invalid
+       		Call RandomNum function
+			playerOne.score=RandomNum   
+    		}
+   		while (level2Choice < 1 || level2Choice > 3)
+
+	Display lvl 2 menu re: lvl 1 question 1 answer 2
+        	if (level1Choice == 2)
+       		do
+  	  	{
+        		1.
+			2.
+			3.
+        		Prompt for level2Choice
+		Validate
+      			if (level2Choice == 1)
+				Display comment
+        		else if (level2Choice == 2)
+				Display comment
+       			else if (level2Choice == 3)
+       				Display comment
+                    	Else
+       				Display invalid
+       		Call RandomNum function
+			playerOne.score=RandomNum   
+    		}
+   		while (level2Choice < 1 || level2Choice > 3)
+
+	Display lvl 2 menu re: lvl 1 question 1 answer 3
+        	if (level1Choice == 2)
+       		do
+  	  	{
+        		1.
+			2.
+			3.
+        		Prompt for level2Choice
+		Validate
+      			if (level2Choice == 1)
+				Display comment
+        		else if (level2Choice == 2)
+				Display comment
+       			else if (level2Choice == 3)
+       				Display comment
+                    	Else
+       				Display invalid
+       		Call RandomNum function
+			playerOne.score=RandomNum    
+    		}
+   		while (level2Choice < 1 || level2Choice > 3)
+
+	Display level 2 score  
+	Call Plurality function
+		Plurality(playerOne.score)
+	Keep running total of score     
+   		total += score  
+       	
+
+
+		Display menu choices for level 3
+       		Display lvl 3 menu re: lvl 2 question 1 answer 1
+      	 		if (level1Choice == 1 && level2Choice == 1)
+       			do
+  			{
+        			1.
+				2.
+				3.
+        			Prompt for level3Choice
+			Validate
+      				if (level3Choice == 1)
+					Display comment
+        			else if (level3Choice == 2)
+					Display comment
+       				else if (level3Choice == 3)
+       					Display comment
+                   		Else
+       					Display invalid
+      		 	Call RandomNum function
+				playerOne.score=RandomNum    
+    			}
+        		while (level3Choice < 1 || level3Choice > 3) 
+
+       		Display lvl 3 menu re: lvl 2 question 1 answer 2
+   		else if (level1Choice == 1 && level2Choice == 2)
+       			do
+  			{
+        			1.
+				2.
+				3.
+        			Prompt for level3Choice
+			Validate
+      				if (level3Choice == 1)
+					Display comment
+        			else if (level3Choice == 2)
+					Display comment
+      				 else if (level3Choice == 3)
+       					Display comment
+                   		 Else
+       					Display invalid
+      			Call RandomNum function
+				playerOne.score=RandomNum   
+    			}
+      		 	while (level3Choice < 1 || level3Choice > 3)
+
+       		Display lvl 3 menu re: lvl 2 question 1 answer 3
+       		else if (level1Choice == 1 && level2Choice == 3)
+       			do
+  			{
+        			1.
+				2.
+				3.
+        			Prompt for level3Choice
+			Validate
+      				if (level3Choice == 1)
+					Display comment
+        			else if (level3Choice == 2)
+					Display comment
+      				else if (level3Choice == 3)
+       					Display comment
+                   		Else
+       					Display invalid
+       			Call RandomNum function
+				playerOne.score=RandomNum   
+    			}
+       			while (level3Choice < 1 || level3Choice > 3)
+
+       		Display lvl 3 menu re: lvl 2 question 2 answer 1
+       		else if (level1Choice == 2 && level2Choice == 1)
+       			do
+  			{
+        			1.
+				2.
+				3.
+        			Prompt for level3Choice
+			Validate
+      				if (level3Choice == 1)
+					Display comment
+        			else if (level3Choice == 2)
+					Display comment
+      	 			else if (level3Choice == 3)
+       					Display comment
+                   		Else
+       					Display invalid
+       			Call RandomNum function
+				playerOne.score=RandomNum  
+    			}
+       			while (level3Choice < 1 || level3Choice > 3)
+
+       		Display lvl 3 menu re: lvl 2 question 2 answer 2
+   		else if (level1Choice == 2 && level2Choice == 2)
+       			do
+  			{
+        			1.
+				2.
+				3.
+        			Prompt for level3Choice
+			Validate
+      				if (level3Choice == 1)
+					Display comment
+        			else if (level3Choice == 2)
+					Display comment
+      				else if (level3Choice == 3)
+       					Display comment
+                   		Else
+       					Display invalid
+       		Call RandomNum function
+			playerOne.score=RandomNum     
+    		}
+       		while (level3Choice < 1 || level3Choice > 3)
+
+       		Display lvl 3 menu re: lvl 2 question 2 answer 3
+       		else if (level1Choice == 2 && level2Choice == 3)
+       			do
+  			{
+        			1.
+				2.
+				3.
+        			Prompt for level3Choice
+			Validate
+      				if (level3Choice == 1)
+					Display comment
+        			else if (level3Choice == 2)
+					Display comment
+       				else if (level3Choice == 3)
+       					Display comment
+                   		Else
+       					Display invalid
+       		Call RandomNum function
+			playerOne.score=RandomNum    
+    			}
+       			while (level3Choice < 1 || level3Choice > 3)
+
+      		Display lvl 3 menu re: lvl 2 question 2 answer 1
+       		else if (level1Choice == 3 && level2Choice == 1)
+       			do
+  			{
+        			1.
+				2.
+				3.
+        			Prompt for level3Choice
+			Validate
+      				if (level3Choice == 1)
+					Display comment
+        			else if (level3Choice == 2)
+					Display comment
+       				else if (level3Choice == 3)
+       					Display comment
+                   		Else
+       					Display invalid
+       		Call RandomNum function
+			playerOne.score=RandomNum    
+    		}
+       		while (level3Choice < 1 || level3Choice > 3)
+
+       		Display lvl 3 menu re: lvl 2 question 3 answer 2
+       		else if (level1Choice == 1 && level2Choice == 2)
+       			do
+  			{
+        			1.
+				2.
+				3.
+        			Prompt for level3Choice
+			Validate
+      				if (level3Choice == 1)
+					Display comment
+        			else if (level3Choice == 2)
+					Display comment
+       				else if (level3Choice == 3)
+       					Display comment
+       				Else
+       					Display invalid
+      		Call RandomNum function
+			playerOne.score=RandomNum     
+       			}
+      			while (level3Choice < 1 || level3Choice > 3)
+
+       		Display lvl 3 menu re: lvl 2 question 3 answer 3
+       		else if (level1Choice == 3 && level2Choice == 3)
+       			do
+  			{
+        			1.
+				2.
+				3.
+        			Prompt for level3Choice
+			Validate
+      				if (level3Choice == 1)
+					Display comment
+        			else if (level3Choice == 2)
+					Display comment
+       				else if (level3Choice == 3)
+       					Display comment
+                   		Else
+       					Display invalid
+       		Call RandomNum function
+			playerOne.score=RandomNum     
+    		}
+       		while (level3Choice < 1 || level3Choice > 3)
+
+	Level 3 score  
+	if (level3Choice == 2 && level2Choice == 2 && level1Choice == 3)
+       		Display you lose, no score for level 3
+       	Else
+       		Display level 3 score
+		Call Plurality function
+			Plurality(playerOne.score)
+       		Keep running total of score     
+   			total += score  
+		Display total score
+
+	Determine if user's score beats current high scores and, if so, write new info to file
+		Open outfile
+		if(playerOne.total>myPlayers[0].score)
+		{
+			myPlayers[2]=myPlayers[1]
+			myPlayers[1]=myPlayers[0]
+			myPlayers[0]=playerOne;
+			Call function DisplayCelebration
+			Call function WriteTopPlayers(myPlayers, size)
+		}
+		else if(playerOne.total>myPlayers[1].score)
+		{
+			myPlayers[2]=myPlayers[1]
+			myPlayers[0]=playerOne;
+			Call function DisplayCelebration
+			Call function WriteTopPlayers(myPlayers, size)
+		}
+		else if(playerOne.total>myPlayers[2].score)
+		{
+			myPlayers[2]=playerOne;
+			Call function DisplayCelebration
+			Call function WriteTopPlayers(myPlayers, size)
+		}
+		else not a high score
+
+
+
+	Temporarily display read in information to test code
+	
+
+Break
+       
+
+case 3: Quit
+        Display Goodbye
+Break
+
+       
+default:
+	Display invalid. Must choose 1-3
+
+}
+while (menuChoice != 3);
+return 0
+
+FUNCTION DEFINITIONS
+int RandomNum
+{
+declare local variable for int score
+Generate random number
+	srand(time(NULL))
+	score=rand () %20+1
+return score
+}
+
+Player GetPlayer
+{
+Declare file pointer infile
+Declare variable for Player tempPlayer
+Open file "highscore.txt"
+Read in data for tempPlayer.userName and tempPlayer.score
+Close file
+return tempPlayer
+}
+
+void DisplayCelebration
+	display ASCII image
+
+void WriteTopPlayers(Player myPlayers[], int size)
+{
+declare file pointer outfile
+open file "highscore.txt"
+for loop to write top players to file
+	for(int i=0; i<size; i++)
+	}
+		write myPlayers[i].userName and myPlayers[i].score to file
+	}
+close file
+}
+
+void Plurality(&playerOne.score)
+{
+	if (playerOne.score == 1) display point!
+	else display points!
+}
+
+
+
+
+
+
+
+
