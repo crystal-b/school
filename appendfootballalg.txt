@@ -1,0 +1,12 @@
+Appending a File Algorithm
+This is a program that appends the “football.txt” file to add additional data
+Crystal Brusch / ml149
+June 6, 2013
+
+Include the file stream library
+Declare a file pointer
+Open the file “football.txt” so it can be edited
+Add the following additional data:
+Drew Brees, 10000000, 31, New Orleans Saints, Quarterback
+Close file
+
