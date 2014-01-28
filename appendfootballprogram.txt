@@ -1,0 +1,25 @@
+/* appendfootball.cpp
+A program that appends the “football.txt” file to add additional data
+Crystal Brusch / ml149
+June 6, 2013
+*/
+
+#include <iostream>
+//Include the file stream library
+#include <fstream>
+using namespace std;
+
+int main()
+{   
+    //Declare a file pointer
+    ofstream outfile;
+    //Open the file “football.txt” so it can be edited
+    outfile.open ("football.txt", ios::out | ios::app);
+    //Add the following additional data:
+    //Drew Brees, 10000000, 31, New Orleans Saints, Quarterback
+    outfile << "Drew Brees\n10000000\n31\nNew Orleans Saints\nQuarterback\n";
+    //Close file
+    outfile.close();
+    
+    return 0;
+}
