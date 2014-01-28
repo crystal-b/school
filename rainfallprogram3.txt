@@ -1,0 +1,150 @@
+/*rainfall.txt
+
+This is a program that calculates the average monthly inches of rainfall over a period of years.
+Crystal Brusch / ml149
+*/
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main ()
+{
+
+	//Declare and initialize variables
+	const int MONTHS_IN_YEAR = 12;
+	int numYears = 0, monthsTotal = 0;
+    	double monthRainfallTotal = 0.0, yearRainfallTotal = 0.0, inchesRainfall = 0.0;
+    	double avgRainfall = 0.0, rainInches = 0.0; 
+	
+	//Intro
+	cout << "Welcome to the Average Rainfall Calculator!\n\n";
+
+	do
+	{
+	//Prompt for number of years
+	cout << "Please enter the number of years for which you want to calculate \n";
+    	cout << "the average rainfall: ";
+	cin >> numYears;
+    	//Validate (cannot be less than 1 year)
+    	if(numYears < 1)
+		cout << "Invalid. You must enter at least 1 year\n\n";
+	}
+	while (numYears < 1);	
+		
+	
+	//Prompt for monthly rainfall data for the specified number of years
+    	//for loop
+    	for (int year = 1; year <= numYears; year++)
+    	{
+        //yearRainfallTotal = 0.0;
+        	for (int month = 1; month <= 12; month++)
+        	{   
+            	//double inchesRainfall = 0.0;
+            	cout << "\nEnter the inches of rainfall for month " << month;
+            	cout << " in year " << year << ": ";
+            	cin >> inchesRainfall;
+            	//Validate that rainfall is not negative
+            	if (inchesRainfall < 0)  
+                	cout << "Invalid. Rainfall cannot be less than zero.\n\n";
+        }
+        //while (inchesRainfall < 0);
+        monthRainfallTotal += inchesRainfall;
+        //yearRainfallTotal += monthRainfallTotal;
+    }
+    yearRainfallTotal += monthRainfallTotal;
+    
+    //Calculate number of months
+    monthsTotal = numYears * MONTHS_IN_YEAR;
+        
+    //Display total months
+    cout << "\n\nYou entered rainfall data for " << monthsTotal << " months\n\n";
+    
+    //Display total rainfall
+    cout << fixed << showpoint << setprecision(2);
+    cout << "The " << numYears << " year period had " << yearRainfallTotal;
+    cout << " inches of rainfall\n\n";
+    
+    //Calculate avgerage rainfall
+    avgRainfall = rainInches / monthsTotal;
+    
+    //Display average rainfall
+    cout << "The average monthly rainfall for the years entered is: ";
+    cout << avgRainfall << endl;
+
+	return 0;
+}
+
+/*rainfall.txt
+
+This is a program that calculates the average monthly inches of rainfall over a period of years.
+Crystal Brusch / ml149
+
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main ()
+{
+
+	//Declare and initialize variables
+	const int MONTHS_IN_YEAR = 12, MIN_MONTH = 1, MAX_MONTH = 12;
+	int numYears = 0, yearLoops = 0;
+	float avgRainfall = 0.0, monthOneRainfall = 0.0, monthTwoRainfall = 0.0, monthThreeRainfall = 0.0;
+	float monthFourRainfall = 0.0, monthFiveRainfall = 0.0, monthSixRainfall = 0.0;
+	float monthSevenRainfall = 0.0, monthEightRainfall = 0.0, monthNineRainfall = 0.0;
+	float monthTenRainfall = 0.0, monthElevenRainfall = 0.0, monthTwelveRainfall = 0.0;
+	
+	//Intro
+	cout << "Welcome to the Average Rainfall Calculator!\n\n";
+
+	//Prompt for number of years and validate (cannot be less than 1 year)
+	cout << "Please enter the number of years for which you want to calculate the average rainfall: ";
+	cin >> numYears;
+	while (numYears < 1)
+	{
+		cout << "Invalid. Please enter a total of at least 1 year: ";
+		cin >> numYears;
+	}
+	
+	yearLoops = MONTHS_IN_YEAR * numYears
+
+	//Create switch structure for menu choices
+	int num;
+	for (num = MIN_MONTH; num <= MAX_MONTH; num++)
+		cout << "Enter the total rainfall for month " << num << ": ";
+		cin >> monthOneRainfall;
+
+/*Prompt for year 1
+
+Prompt for inches of rain in January-December of year 1
+
+Validate each entry
+
+Prompt for year 2
+
+Prompt for inches of rain in January-December of year 2
+
+Validate each entry
+
+While option!2
+
+Calculate number of months = number of years * 12
+
+Display number of months
+
+Calculate total inches of rain = adding each months rainfall
+
+Display total inches of rain
+
+Calculate average rainfall = total inches of rain / number of months
+
+Display average rainfall
+
+
+
+	return 0;
+}
+
+*/
