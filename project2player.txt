@@ -1,0 +1,62 @@
+//Project 2 - struct for Player
+#include <iostream>
+#include<iomanip>
+#include<string>
+using namespace std;
+
+struct Player
+{
+	string userName;
+	int score, total;
+
+
+	Player()
+	{
+		score=0;
+		total=0;
+	}
+};
+
+
+Player GetPlayer();
+
+void DisplayTopPlayers(Player[], int);
+
+const int SIZE = 3;
+
+int main()
+{
+
+	Player myPlayers[SIZE];
+    
+    for(int i = 0; i < SIZE; i++)
+    {
+	   myPlayers[i]=GetPlayer();
+    }
+	
+
+	DisplayTopPlayers(myPlayers, SIZE);
+
+	return 0;
+}
+
+Player GetPlayer()
+{
+	Player tempPlayers;
+    
+cout<<"what is the player name: ";
+    cin>>tempPlayers.userName;
+    cout<<"what is the player score: ";
+    cin>>tempPlayers.total;
+    
+    return tempPlayers;
+	
+}
+
+void DisplayTopPlayers(Player myPlayers[], int SIZE)
+{
+	for(int i = 0; i < SIZE; i++)
+	{
+		cout<<myPlayers[i].userName<<" "<<myPlayers[i].total<<endl;
+	}
+}
