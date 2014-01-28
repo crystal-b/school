@@ -1,0 +1,15 @@
+Reading From and Writing to a File Algorithm
+This is a program that reads data from the file “football.txt”, then creates a new file called 
+“footballformatted.txt” that writes and formats the data from the first file
+Crystal Brusch / ml149
+June 5, 2013
+
+Include the file stream library
+Declare a file pointer
+Read file “football.txt” (display data if desired)
+Close file “football.txt”
+Declare a file pointer
+Create new file called “footballformatted.txt”
+Write the following information to the file also using data from “football.txt”:
+Player name, Salary, Age, Team, Position
+Close file
