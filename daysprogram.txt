@@ -1,0 +1,121 @@
+//Function + arrays
+//days.cpp 
+//Crystal Brusch/ml149 
+//July 25, 2013 
+//This program calculates the average number of days employee absences 
+ 
+#include <iostream> 
+#include <iomanip> 
+using namespace std; 
+ 
+//Include void function prototype 
+//void function, no return but passes by reference 
+//paramaters: 1 int 
+//purpose: this function prompts for the number of employees and refers that number 
+void GetNumEmployees(); 
+ 
+//Include int function prototype 
+//return type: int 
+//parameter: 1 int 
+//purpose: this function uses a for loop to repeatedly prompt for the number of days each employee 
+missed 
+//it also keeps a running total of the number of missed days 
+int TotalDaysMissed(); 
+ 
+//Include float function prototype 
+//return type: float 
+//parameter: 2 ints 
+float AvgDaysMissed(int,int); 
+ 
+//Include int main 
+int main() 
+{ 
+ 
+    //Declare and initialize variables:  
+    int numEmployees=0, numMissedDays=0, totalMissedDays=0, i=0, n, t; 
+    float avgMissedDays=0.0; 
+     
+    //Intro 
+    cout<<"Welcome to the Employee Absence Calculator!\n\n"; 
+     
+    //call AvgDaysMissed function     
+    AvgDaysMissed(t, n); 
+     
+    return 0; 
+} 
+ 
+//Definition: prompt for number of employees 
+void GetNumEmployees(int &n) 
+{     
+       int numEmployees=0;    
+    do 
+    { 
+          cout<<"Enter the number of employees: "; 
+        cin>>numEmployees; 
+        if(numEmployees<1) 
+            cout<<"Invalid. The number must be greater than zero.\n\n"; 
+        n=numEmployees; 
+    } 
+    while(numEmployees<1); 
+} 
+ 
+//Definition: use GetNumEmployees function and prompt for number of days each employee missed in 
+the last year 
+int TotalDaysMissed(int &t) 
+{ 
+    int i=0, n=0, j=0, numMissedDays=0, totalMissedDays=0; 
+    GetNumEmployees(n); 
+    
+    for (int i=1; i<=n; i++) 
+   { 
+        int numMissedDays=0, totalMissedDays=0; 
+        do 
+        { 
+        cout<<"Please enter the number of days the employee missed: "; 
+        cin>>numMissedDays; 
+        if(numMissedDays<0) 
+            cout<<"Invalid. The number must be positive.\n\n"; 
+        totalMissedDays += numMissedDays; 
+          } 
+          while(numMissedDays<0); 
+    } 
+      //total days 
+      //TEST:totalMissedDays=20; 
+    //totalMissedDays += numMissedDays; 
+    //TEST:cout<<totalMissedDays<<endl; 
+    t=totalMissedDays; 
+   //return totalMissedDays; 
+} 
+ 
+//use num employees and num days to calculate avg num of days missed 
+//no user input/prompting 
+float AvgDaysMissed(int t, int n) 
+{ 
+    float avgMissedDays=0.0; 
+    TotalDaysMissed(t); 
+    avgMissedDays=t/n; 
+    cout<<"\nAn employee is absent for an average of 
+"<<fixed<<showpoint<<setprecision(2)<<avgMissedDays<<" days.\n\n"; 
+}
+
+
+//ARRAYS
+//constant to represent size of array
+cons tint SIZE = 2;
+int main()
+{
+	//declare some parallel arrays
+	string firstName[SIZE], lastName[SIZE];
+	int numCredits[SIZE];
+	
+	//prompt for data
+	for(int i = 0;  I < SIZE; i++)
+	{
+		cout<<îStudent #î<<i+1<<î:\nî;
+		cout<<îEnter first name: ì;
+       cin>>firstName[i];
+		cout<<îEnter last name: ì;
+		cin>>lastName[i];
+	}
+return 0;
+}
