@@ -1,0 +1,34 @@
+/*readfootball.cpp
+This is a program that reads data from the file “football.txt”, then creates a new file called “footballformatted.txt” that adds and formats the data from the first file
+June 5, 2013
+*/
+
+#include <iostream>
+//Include the file stream library
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    //Declare a file pointer
+    ifstream infile;
+//Read from file
+    infile.open ("football.txt", ios::in);
+    //Close first file
+    infile.close();
+ //Declare a file pointer
+ ofstream outfile;
+    //Create new file called “footballformatted.txt”
+    outfile.open ("footballformatted.txt", ios::out);
+    //Write the following information to the file also using data from football.txt:
+    //Player name, Salary, Age, Team, Position
+    outfile << "***************Player Summary***************\n";
+    outfile << "Player name:\tPeyton Manning\nSalary:\t$14000000.00\nAge:\t33\n";
+    outfile << "Team:\tIndianapolis Colts\nPosition:\tQuarterback\n";
+    //infile << "Player name:\t"<<Peyton Manning\n14000000\n33\nIndianapolis Colts\nQuarterback\n";
+    //Close file
+    outfile.close();
+    
+    return 0;
+}
+
