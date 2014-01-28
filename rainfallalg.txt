@@ -1,0 +1,28 @@
+rainfallalg.txt
+
+This is a program that calculates the average monthly inches of rainfall over a period of years.
+Crystal Brusch / ml149
+
+Declare and initialize variables
+
+Intro
+
+Prompt for number of years
+
+Validate (cannot be less than 1 year)
+while loop
+
+Prompt for monthly rainfall data for the specified number of years
+for loop
+
+Calculate number of months = number of years * 12
+
+Display number of months
+
+Calculate total inches of rain = adding each month's rainfall
+
+Display total inches of rain
+
+Calculate average rainfall = total inches of rain / number of months
+
+Display average rainfall
