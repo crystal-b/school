@@ -101,7 +101,7 @@ float AvgDaysMissed(int t, int n)
 
 //ARRAYS
 //constant to represent size of array
-constant SIZE = 2;
+const int SIZE = 2;
 int main()
 {
 	//declare some parallel arrays
