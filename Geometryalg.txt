@@ -1,0 +1,64 @@
+geometryalg.txt
+Vagner Domingues ml40 and Crystal Brusch ml149
+
+This is a program that displays a menu to calculate the area of a circle, a rectangle, or the area of a 
+triangle.
+
+
+Declare and initialize variables:
+Constant = Pi, .5
+Double = area, radius, length, width, base, height
+Int = menu choice
+
+Intro
+
+Prompt for menu choice
+
+Do
+
+Create switch structure
+
+Case 1 = area of circle
+       do
+       prompt for radius
+       Validate
+       if radius <0
+       	display invalid
+       while radius< 0
+       Calculate radius A = pi * radius^2
+       Display area
+
+Case 2= area of rectangle
+       do
+       prompt for length and width
+       Validate
+       if length <0 and width <0
+       	display invalid
+       while length <0 and width <0
+       Calculate A = length * width
+	Display area 
+
+Case 3 = area of triangle
+       do
+       prompt for base and height
+       Validate
+       if base <0 and height <0
+       	display invalid
+       while base <0 and height <0
+       Calculate A = .5 constant * base * height
+       Display area
+
+Case 4 = exit
+       For case 4 = display “good bye”
+       
+Default = display “invalid. You must choose 1-4 from the menu”
+
+While menu choice is != 4
+
+
+
+
+
+
+
+
