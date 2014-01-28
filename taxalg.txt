@@ -1,0 +1,17 @@
+Property Tax Algorithm
+This program asks for the actual value of a property to calculate the assessment value (60% of the actual 
+value) and the property tax (64% of the assessment value)
+Use constants when possible
+Crystal Brusch / ml149
+June 6, 2013
+
+Include the file stream library
+Declare constants
+Declare and initialize variables
+Intro
+Prompt for information on home value
+Calculate assessment value
+Display assessment value
+Calculate property tax
+Display property tax
+
